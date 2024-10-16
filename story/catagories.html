@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Categories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: aqua;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #111;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: aqua;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            background-color: aqua;
+            color: black;
+        }
+
+        /* Category section styles */
+        .category-section {
+            margin: 20px;
+            text-align: center;
+            padding-bottom: 60px; /* Space for the navbar */
+        }
+
+        .category-section h2 {
+            color: aqua;
+            margin-bottom: 20px;
+        }
+
+        /* Category container: 4 categories per row */
+        .category-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            margin: 0;
+        }
+
+        .category-item {
+            background-color: rgba(34, 34, 34, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            position: relative; /* Allow absolute positioning for title */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            margin: 0;
+        }
+
+        .category-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .category-title {
+            position: absolute;
+            bottom: 10px; /* Position at the bottom */
+            left: 10px; /* Position from left */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white; /* Text color */
+            padding: 5px 10px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        /* Responsive: for mobile devices, show 1 category per row */
+        @media (max-width: 768px) {
+            .category-container {
+                grid-template-columns: 1fr; /* 1 category per row */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Category section -->
+    <div class="category-section" id="categories">
+        <h2>Story Categories</h2>
+        <div class="category-container">
+            <!-- Category 1 -->
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/dd/ee/94/ddee94871cb58325dedbed5c01383037.jpg" alt="Adventure Stories">
+                    <div class="category-title">Hindi</div>
+                </div>
+            </a>
+
+            <!-- Category 2 -->
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/enabled_hi/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="Fairy Tales">
+                    <div class="category-title">English</div>
+                </div>
+            </a>
+
+            <!-- Category 3 -->
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/enabled_hi/564x/11/c8/12/11c812d7d50b5e3a93d6d0634a7386ce.jpg" alt="Horror Stories">
+                    <div class="category-title">Horror</div>
+                </div>
+            </a>
+
+            <!-- Category 4 -->
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/736x/29/72/76/297276d9a515e254b5bf866ed2513285.jpg" alt="Romantic Stories">
+                    <div class="category-title">Romantic</div>
+                </div>
+            </a>
+
+            <!-- Additional categories -->
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/736x/14/d4/c4/14d4c48e1f1f55e5c4ae9c420c07ceb7.jpg" alt="Science Fiction">
+                    <div class="category-title">Experiment</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/enabled_hi/564x/6c/e7/bd/6ce7bd0d4477f256ba0852a156e902da.jpg" alt="Mystery Stories">
+                    <div class="category-title">Mystery</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/ce/4b/ac/ce4bacb29374bea8d4e8e6fbd81a44b0.jpg" alt="Fantasy Stories">
+                    <div class="category-title">Fantasy</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.de/1280/7/151/25397165/25397165_046_6a3d.jpg" alt="Historical Stories">
+                    <div class="category-title">Gangbang</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/enabled_hi/564x/7f/1b/db/7f1bdb7b260276cf17e9385fb17514f6.jpg" alt="Historical Stories">
+                    <div class="category-title">Hindu-Muslim</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.de/1280/7/328/87835162/87835162_015_4c0a.jpg" alt="Historical Stories">
+                    <div class="category-title">Slave</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/enabled_hi/564x/4c/64/6d/4c646d2b443895ee407642f16bcade7e.jpg" alt="Historical Stories">
+                    <div class="category-title">Hot- wife</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/63/19302062/19302062_010_5e24.jpg" alt="Historical Stories">
+                    <div class="category-title">Humiliation</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/enabled_hi/564x/12/02/d0/1202d00e2e30b5d623ef32e8968dd540.jpg" alt="Historical Stories">
+                    <div class="category-title">Randi</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/2e/0c/09/2e0c098041b8d3640babb47c95bea5e0.jpg" alt="Historical Stories">
+                    <div class="category-title">Girlfriend</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/302/95181565/95181565_012_8abd.jpg" alt="Historical Stories">
+                    <div class="category-title">Torture</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://8muses.io/img/data/full_000000334287.jpg" alt="Historical Stories">
+                    <div class="category-title">comic</div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="category-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Historical Stories">
+                    <div class="category-title">Historical</div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="story/catagories.html"><i class="fas fa-th-list"></i></a>
+        <a href="story/language.html"><i class="fas fa-tv"></i></a>
+        <a href="story/genre.html"><i class="fas fa-user"></i></a>
+    </div>
+
+</body>
+</html>

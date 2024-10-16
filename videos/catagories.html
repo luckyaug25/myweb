@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Categories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: aqua;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #111;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: aqua;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            background-color: aqua;
+            color: black;
+        }
+
+        /* Category section styles */
+        .category-section {
+            margin: 20px;
+            text-align: center;
+            padding-bottom: 60px; /* Space for the navbar */
+        }
+
+        .category-section h2 {
+            color: aqua;
+            margin-bottom: 20px;
+        }
+
+        /* Category container: 4 categories per row */
+        .category-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            margin: 0;
+        }
+
+        .category-item {
+            background-color: rgba(34, 34, 34, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            position: relative; /* Allow absolute positioning for title */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            margin: 0;
+        }
+
+        .category-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .category-title {
+            position: absolute;
+            bottom: 10px; /* Position at the bottom */
+            left: 10px; /* Position from left */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white; /* Text color */
+            padding: 5px 10px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        /* Responsive: for mobile devices, show 1 category per row */
+        @media (max-width: 768px) {
+            .category-container {
+                grid-template-columns: 1fr; /* 1 category per row */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Category section -->
+    <div class="category-section" id="categories">
+        <h2>Video Categories</h2>
+        <div class="category-container">
+            <!-- Category 1 -->
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/dd/ee/94/ddee94871cb58325dedbed5c01383037.jpg" alt="Hindi">
+                    <div class="category-title">Indian</div>
+                </div>
+            </a>
+
+            <!-- Category 2 -->
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Hollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/4c/20/48/4c20483a317f73e7534c1ca38852945c.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/73/4d/a6/734da6efb7a8c57bb0c23190ad013f80.jpg" alt="English">
+                    <div class="category-title">SOUTH INDIAN</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/301/23914999/23914999_022_1ef8.jpg" alt="English">
+                    <div class="category-title">BDSM</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/315/16429368/16429368_006_dd14.jpg" alt="English">
+                    <div class="category-title">Bondage</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/131/70036379/70036379_009_3450.jpg" alt="English">
+                    <div class="category-title">Gangbang</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/183/63853235/63853235_030_cdce.jpg" alt="English">
+                    <div class="category-title">Romantic</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/302/72283365/72283365_061_d75f.jpg" alt="English">
+                    <div class="category-title">Rough</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/83/52870195/52870195_034_9bbf.jpg" alt="English">
+                    <div class="category-title">Torture</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://elitepain.com/free_ep/thdarcia_12.jpg" alt="English">
+                    <div class="category-title">Elitepain</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/542/17418913/17418913_038_327e.jpg" alt="English">
+                    <div class="category-title">BBC</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/5/203/24610391/24610391_015_7479.jpg" alt="English">
+                    <div class="category-title">Interracial</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/575/46729020/46729020_074_d4aa.jpg" alt="English">
+                    <div class="category-title">Blowjob</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/736/24331445/24331445_269_e861.jpg" alt="English">
+                    <div class="category-title">Hardcore</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/d8/5c/29/d85c29428274f9dbd5a5b94ce4add93b.jpg" alt="English">
+                    <div class="category-title">Full Film</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/328/87835162/87835162_031_ddbd.jpg" alt="English">
+                    <div class="category-title">Brutal</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/372/94161789/94161789_017_f2ec.jpg" alt="English">
+                    <div class="category-title">Vibrator</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/328/24934844/24934844_020_cf32.jpg" alt="English">
+                    <div class="category-title">Humiliation</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/353/87742083/87742083_054_55b0.jpg" alt="English">
+                    <div class="category-title">Public</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title"></div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/7/228/16778033/16778033_158_503b.jpg" alt="English">
+                    <div class="category-title">Deapthroat</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://elitepain.com/free_ep/cop8_71.jpg" alt="English">
+                    <div class="category-title">Trailers</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://cdni.pornpics.com/1280/1/131/33145729/33145729_015_991d.jpg" alt="English">
+                    <div class="category-title">orgasm</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="category-item">
+                    <img src="https://i.pinimg.com/564x/f8/7f/04/f87f049bc96fa2bd6f030e439fdacd81.jpg" alt="English">
+                    <div class="category-title">Bollywood</div>
+                </div>
+            </a>
+
+            <!-- Additional categories (use proper URLs for images) -->
+            <!-- Add as many categories as needed -->
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="catagories.html"><i class="fas fa-th-list"></i></a>
+        <a href="theme.html"><i class="fas fa-tv"></i></a>
+        <a href="authors.html"><i class="fas fa-user"></i></a>
+    </div>
+
+</body>
+</html>
