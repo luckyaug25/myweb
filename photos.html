@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            background-color: black;
+            color: aqua;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full height for body */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #111;
+            padding: 10px;
+            position: fixed; /* Fix navbar to bottom */
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: aqua;
+            text-decoration: none;
+            text-align: center;
+            font-size: 12px;
+            flex-grow: 1;
+        }
+
+        .navbar a:hover {
+            background-color: aqua;
+            color: black;
+            border-radius: 3px;
+        }
+
+        .navbar i {
+            display: block;
+            font-size: 15px; /* Icon size */
+            margin-bottom: 3px; /* Space between icon and text */
+            margin-right: 4px;
+        }
+
+        /* Photos section styles */
+        .photos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            flex-grow: 1; /* Allow this to take remaining space */
+            overflow-y: scroll; /* Enable vertical scrolling */
+            scrollbar-width: none; /* For Firefox */
+        }
+        
+        .photos-container::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Edge */
+        }
+
+        .photo-item {
+            width: 250px;
+            height: auto;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            cursor: pointer; /* Show pointer cursor on hover */
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+            object-fit: cover; /* Ensure the image covers the container without distortion */
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Fullscreen popup styles */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1001; /* Above other elements */
+        }
+
+        .popup img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .photo-item {
+                width: 90%; /* Full width for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Photos Section -->
+    <div class="photos-container">
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/736x/db/09/e9/db09e940cb8e3132b30f16fd11e5dcd5.jpg" alt="Photo 1">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/736x/77/00/a0/7700a0f3b4f128661df93b4e0272ebdd.jpg" alt="Photo 2">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/564x/52/73/7f/52737f58753eb965aec9a8b2f7f21615.jpg" alt="Photo 3">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/564x/32/f1/43/32f14331596049edbb41bd9cc1aacc2b.jpg" alt="Photo 4">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/564x/a8/68/9b/a8689b583e17accd572940b5fd013513.jpg" alt="Photo 5">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/564x/ed/95/7a/ed957ae6e5fe69c91ba6bd07fa946c50.jpg" alt="Photo">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/564x/a0/5d/c3/a05dc3f31e95860d6b3c4c45f7145442.jpg" alt="Photo">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/enabled_hi/564x/27/a3/b2/27a3b23bd265103e9957edb189effe85.jpg" alt="Photo">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/564x/87/e9/87/87e9872968ebf6946fa12eed4edf510e.jpg" alt="Photo">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/564x/f8/5b/a7/f85ba7a1f38996f400a3af04b4e5b8be.jpg" alt="Photo">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/736x/9f/ab/0c/9fab0c28f213aa46b9ab2b09c648b16c.jpg" alt="Photo">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/enabled_hi/564x/fb/bc/d3/fbbcd3fc840fec0e63f7b75686a9a887.jpg" alt="Photo">
+        </div>
+        <div class="photo-item" onclick="openPopup(this)">
+            <img src="https://i.pinimg.com/564x/a3/8d/0e/a38d0edefd567dc3e2791d42092636ca.jpg" alt="Photo">
+        </div>
+    </div>
+
+    <!-- Fullscreen Popup -->
+    <div class="popup" id="popup" onclick="closePopup(event)">
+        <button class="close-btn" onclick="closePopup(event)">✖</button>
+        <img id="popup-image" src="" alt="Popup Image">
+    </div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="photo/categories.html"><i class="fas fa-th-list"></i> Categories</a>
+        <a href="photo/Channels.html"><i class="fas fa-tv"></i> Channels</a>
+        <a href="photo/Actors.html"><i class="fas fa-user"></i> Actors</a>
+    </div>
+
+    <script>
+        function openPopup(element) {
+            const popup = document.getElementById('popup');
+            const popupImage = document.getElementById('popup-image');
+            popupImage.src = element.querySelector('img').src; // Get the source of the clicked image
+            popup.style.display = 'flex'; // Show the popup
+        }
+
+        function closePopup(event) {
+            if (event.target === document.getElementById('popup') || event.target.classList.contains('close-btn')) {
+                document.getElementById('popup').style.display = 'none'; // Hide the popup
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video player -->
+    <video id="reel-video" controls autoplay muted></video>
+
+    <!-- JavaScript for selecting and playing random reels -->
+    <script>
+        // Manually list video filenames
+        const videos = [
+            'reels/reel1.mp4',
+            'reels/reel2.mp4',
+            'reels/reel3.mp4',
+            'reels/reel4.mp4'
+            
+        ];
+
+        const videoElement = document.getElementById('reel-video');
+
+        // Function to load a random video
+        function loadRandomReel() {
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            const selectedVideo = videos[randomIndex];
+            videoElement.src = selectedVideo;
+            videoElement.load();
+            videoElement.play();
+        }
+
+        // Load the first random reel when the page loads
+        loadRandomReel();
+
+        // Play the next random reel when the current one ends
+        videoElement.addEventListener('ended', loadRandomReel);
+
+        // Scroll or arrow key to load the next reel
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                loadRandomReel();
+            }
+        });
+
+        // Scroll event for mouse or touchpad
+        window.addEventListener('wheel', function (e) {
+            if (e.deltaY > 0) { // Scroll down
+                loadRandomReel();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formate</title>
+    <style>
+        body{
+            background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20240104/pngtree-chaotic-red-abstract-shapes-creating-a-textured-background-image_13927794.png);
+            background-size: cover;
+            background-position: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            padding: 0;
+            margin: 0;
+            color: white;
+        }
+        .border-content{
+            display: flex;
+            padding: 5px
+        }
+        .left{
+            flex: 4;
+            padding: 20px;
+            border: 2px solid white;            
+            box-sizing: border-box;
+        }
+        .right{
+            flex: 1;
+            padding: 20px;
+            border: 2px solid white;            
+            box-sizing: border-box;
+        }
+        @keyframes glowing {
+            0% { 
+                box-shadow: 0 0 10px 0 white; /* Initial glow */
+            }
+            50% {
+                box-shadow: 0 0 20px 10px white; /* Increase glow */
+            }
+            100% {
+                box-shadow: 0 0 10px 0 white; /* Return to initial glow */
+            }
+        }
+        
+        /* Animation for glowing effect */
+        .left:hover, .right:hover {
+            animation: glowing 1.5s infinite; /* Apply animation on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Novel</div>
+    </div>
+    <div class="border-content">
+        <section class="left">
+
+        </section>
+        <section class="right">
+    
+        </section>
+    </div>
+    
+</body>
+</html>
