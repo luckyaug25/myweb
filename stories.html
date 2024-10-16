@@ -10,9 +10,6 @@
             color: aqua;
             margin: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            height: 100vh; /* Full height for body */
         }
 
         /* Navbar styles */
@@ -23,7 +20,7 @@
             background-color: #111;
             padding: 10px;
             position: fixed;
-            bottom: 0; /* Position at the bottom */
+            bottom: 0;
             width: 100%;
             z-index: 1000;
         }
@@ -34,81 +31,67 @@
             text-align: center;
             font-size: 20px;
             text-transform: uppercase;
-            width: 30px;
         }
 
         .navbar a:hover {
             background-color: aqua;
             color: black;
-            border-radius: 3px;
         }
 
-        .navbar i {
-            display: block;
-            font-size: 20px; /* Icon size */
-            margin-bottom: 5px; /* Space between icon and text */
-        }
-
-        /* Story section */
-        .story-section {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr); /* Single column by default */
-            gap: 20px;
+        /* Category section styles */
+        .stories-section {
             margin: 20px;
-            flex-grow: 1; /* Allow this to take remaining space */
-            overflow-y: auto; /* Enable vertical scrolling */
-            scrollbar-width: none; /* For Firefox */
-        }
-        .story-section a{
-            text-decoration: none;
-        }
-        
-        .story-section::-webkit-scrollbar {
-            display: none; /* For Chrome, Safari, and Edge */
+            text-align: center;
+            padding-bottom: 60px; /* Space for the navbar */
         }
 
-        .story-card {
-            background-color: #222;
+        .stories-section h2 {
             color: aqua;
-            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        /* stories container: 4 categories per row */
+        .stories-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 40px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .stories-item {
+            background-color: rgba(34, 34, 34, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            text-align: center;
+            position: relative; /* Allow absolute positioning for title */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            margin-top: 20px;
         }
 
-        .story-card h2 {
-            color: black;
-            margin: 0;
-            background-color: rgba(239, 249, 249, 0.815);
-            border-radius: 0 0 10px 10px;
-            font-size: 20px;
+        .stories-item img {
             width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
         }
 
-        /* Responsive grid for larger screens */
-        @media (min-width: 1024px) {
-            .story-section {
-                grid-template-columns: repeat(5, 1fr); /* 5 columns on desktop */
+        .stories-title {
+            position: absolute;
+            bottom: 0px; /* Position at the bottom */
+            left: 0px; /* Position from left */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white; /* Text color *//* Padding around the text */
+            width: 100%;
+            border-radius: 5px; /* Rounded corners */
+            font-size: 25px; /* Font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        /* Responsive: for mobile devices, show 1 stories per row */
+        @media (max-width: 768px) {
+            .stories-container {
+                grid-template-columns: 1fr; /* 1 category per row */
                 
-            }
-
-            .navbar {
-                position: sticky; /* Keep navbar at top on desktop */
-                top: 0;
-            }
-        }
-
-        /* Responsive grid for medium screens */
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .story-section {
-                grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
-                margin-bottom: 20px;
             }
         }
     </style>
@@ -116,64 +99,76 @@
 <body>
 
     <!-- Story section -->
-    <div class="story-section">
+    <div class="stories-section" id="categories">
+        <h2>Stories</h2>
+        <div class="stories-container"></div>
         <a href="story/collection/mawaali.html">
-            <div class="story-card" style="background-image: url(https://i.pinimg.com/736x/c4/a6/b3/c4a6b376566198915047dccc267aeb63.jpg);">
-                <h2>Biwi aur Mawali</h2>
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/c4/a6/b3/c4a6b376566198915047dccc267aeb63.jpg" alt="Adventure Stories">
+                <div class="stories-title">Biwi aur Mawali</div>
             </div>
         </a>
 
         <a href="story/collection/ghulamex.html">
-            <div class="story-card" style="background-image: url(https://i.pinimg.com/736x/77/8e/e2/778ee2e745dceee5ef57142b5a87f725.jpg);">
-                <h2>The Hidden Truth</h2>
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/77/8e/e2/778ee2e745dceee5ef57142b5a87f725.jpg" alt="Adventure Stories">
+                <div class="stories-title">The Hidden Truth</div>
             </div>
         </a>
-
         <a href="story/collection/tenants.html">
-            <div class="story-card" style="background-image: url('https://i.pinimg.com/564x/53/0e/4e/530e4e80484ecfdb95063b2b200d8f2e.jpg');">
-                <h2>Tamannah aur Tanents</h2>
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/564x/53/0e/4e/530e4e80484ecfdb95063b2b200d8f2e.jpg" alt="Adventure Stories">
+                <div class="stories-title">Tamannah aur Tanents</div>
             </div>
         </a>
-
         <a href="story/collection/grandopenning.html">
-            <div class="story-card" style="background-image: url('https://i.pinimg.com/564x/df/d1/12/dfd112e29b6bd295962b3899faa09a7d.jpg');">
-                <h2>jaqlene ki grand openning</h2>
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/564x/df/d1/12/dfd112e29b6bd295962b3899faa09a7d.jpg" alt="Adventure Stories">
+                <div class="stories-title">jaqlene ki grand openning</div>
             </div>
         </a>
-
         <a href="story/collection/chutfati.html">
-            <div class="story-card" style="background-image: url('https://i.pinimg.com/564x/9e/6e/27/9e6e27d82b5000aecb6a185515597184.jpg');">
-                <h2>Chut Fati Aur Sabme Bati</h2>
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/564x/9e/6e/27/9e6e27d82b5000aecb6a185515597184.jpg" alt="Adventure Stories">
+                <div class="stories-title">Chut Fati Aur Sabme Bati</div>
             </div>
         </a>
 
         <a href="story/collection/chaalbadalgayi.html">
-            <div class="story-card" style="background-image: url('https://i.pinimg.com/564x/93/1e/96/931e96404f5d0de962e9a3d16cf7bf0f.jpg');">
-                <h2>Kirthy ki chal badal gayi</h2>
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/564x/93/1e/96/931e96404f5d0de962e9a3d16cf7bf0f.jpg" alt="Adventure Stories">
+                <div class="stories-title">Kirthy ki chal badal gayi</div>
             </div>
         </a>
 
         <a href="story/collection/apaharan.html">
-            <div class="story-card" style="background-image: url('https://image.tmdb.org/t/p/original/fj33AKajFr79filiwrhkD0lpAWS.jpg');">
-                <h2>Apaharan</h2>
+            <div class="stories-item">
+                <img src="https://image.tmdb.org/t/p/original/fj33AKajFr79filiwrhkD0lpAWS.jpg" alt="Adventure Stories">
+                <div class="stories-title">Apaharan</div>
             </div>
         </a>
 
+        
         <a href="story/collection/HaramiPadosi.html">
-            <div class="story-card" style="background-image: url('https://i.pinimg.com/564x/c9/a1/a3/c9a1a3b6ffe2a0e918f2402a29d83aa1.jpg');">
-                <h2>Harami Padosi</h2>
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/564x/c9/a1/a3/c9a1a3b6ffe2a0e918f2402a29d83aa1.jpg" alt="Adventure Stories">
+                <div class="stories-title">Harami Padosi</div>
             </div>
         </a>
 
+    
         <a href="story/collection/NaukraniAurUskaPati.html">
-            <div class="story-card" style="background-image: url('https://i.pinimg.com/736x/88/76/38/887638e81ebe0cbd281844f24660b8c2.jpg');">
-                <h2>Harami Naukrani aur uska chudakkad Pati</h2>
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/88/76/38/887638e81ebe0cbd281844f24660b8c2.jpg" alt="Adventure Stories">
+                <div class="stories-title">Harami Naukrani aur uska chudakkad Pati</div>
             </div>
         </a>
 
-        <a href="story/collection/.html">
-            <div class="story-card" style="background-image: url('');">
-                <h2></h2>
+
+        <a href="story/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
             </div>
         </a>
     </div>
