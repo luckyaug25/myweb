@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+    <style>
+        body {
+            background-color: black;
+            color: aqua;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #111;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: aqua;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            background-color: aqua;
+            color: black;
+        }
+
+        /* Category section styles */
+        .stories-section {
+            margin: 20px;
+            text-align: center;
+            padding-bottom: 60px; /* Space for the navbar */
+        }
+
+        .stories-section h2 {
+            color: aqua;
+            margin-bottom: 20px;
+        }
+
+        /* stories container: 4 categories per row */
+        .stories-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 40px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .stories-item {
+            background-color: rgba(34, 34, 34, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            position: relative; /* Allow absolute positioning for title */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            margin-top: 20px;
+        }
+
+        .stories-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .stories-title {
+            position: absolute;
+            bottom: 0px; /* Position at the bottom */
+            left: 0px; /* Position from left */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white; /* Text color *//* Padding around the text */
+            width: 100%;
+            border-radius: 5px; /* Rounded corners */
+            font-size: 25px; /* Font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        /* Responsive: for mobile devices, show 1 stories per row */
+        @media (max-width: 768px) {
+            .stories-container {
+                grid-template-columns: 1fr; /* 1 category per row */
+                
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Story section -->
+    <div class="stories-section" id="categories">
+        <h2>Ghamandi Biwi Ka Ghamand Toda</h2>
+        <div class="stories-container"></div>
+
+        <a href="ghamandibiwip1.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/9b/30/7a/9b307a5b1449a5a9b2fb26506b582c5c.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-1</div>
+            </div>
+        </a>
+
+        <a href="ghamandibiwip2.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/46/b4/03/46b4039ac4e32eabbff85c0a3618fb98.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-2</div>
+            </div>
+        </a>
+
+        <a href="ghamandibiwip3.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/30/7a/a6/307aa63b75786cd0962d6246b89a555a.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-3</div>
+            </div>
+        </a>
+
+        <a href="ghamandibiwip4.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/26/dc/aa/26dcaa431a1efc62e78f90c6b6625961.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-4</div>
+            </div>
+        </a>
+
+        <a href="ghamandibiwip5.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/b8/8e/28/b88e28ff235785eec089f0a38a48663e.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-5</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> </a>
+        <a href="story/catagories.html"><i class="fas fa-th-list"></i></a>
+        <a href="story/Language.html"><i class="fas fa-language"></i></a>
+        <a href="story/genre.html"><i class="fas fa-book"></i></a>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
