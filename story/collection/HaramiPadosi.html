@@ -5,63 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* General mobile-friendly styles */
-            body {
-                background-color: black;
-                color: aqua;
-                overflow-y: scroll;
-                scrollbar-width: none; /* For Firefox */
-                -ms-overflow-style: none; /* For Internet Explorer and Edge */
-                margin: 0; /* Remove default margin to prevent overflow */
-                padding: 0;
-                box-sizing: border-box; /* Ensure padding and border don't cause overflow */
-            }
+        body{
+            background-color: black;
+            color: aqua;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        iframe {
+            width: 100vw;
+            height: auto;
+            border: none; /* Remove the borders */
+            display: block;
+          }
 
-            /* Images */
-            img {
-                width: 100%;
-                max-width: 100%; /* Ensure images don't exceed 100% */
-                height: auto;
-                display: block; /* Prevent inline gap for images */
-            }
-
-            /* iFrames */
-            iframe {
-                width: 100vw; /* Full viewport width */
-                max-width: 100%; /* Prevent exceeding the viewport width */
-                height: auto;
-                border: none;
-                display: block; /* Block-level element to avoid spacing issues */
-            }
-
-            /* Videos */
-            video {
-                width: 100%;
-                max-width: 100%; /* Ensure videos don't exceed 100% */
-                height: auto;
-                display: block; /* Ensure video is block-level */
-            }
-
-            /* Scrollbar handling for content div */
-            .content {
-                width: 100%; /* Full width */
-                max-width: 100%; /* Prevent exceeding container width */
-            }
-
-            .content::-webkit-scrollbar {
-                display: none; /* Hide scrollbar for WebKit browsers */
-            }
-
-            /* Ensure all elements behave responsively */
-            * {
-                box-sizing: border-box; /* Ensure padding and border are included in element width */
-            }
-
-            /* Optional: Remove horizontal overflow */
-            html, body {
-                overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
-            }
-
+        video{
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>

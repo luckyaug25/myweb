@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eros Apartment Ki Kahaniya</title>
+    <style>
+        body {
+            background-color: black;
+            color: aqua;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #111;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: aqua;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            background-color: aqua;
+            color: black;
+        }
+
+        /* Category section styles */
+        .stories-section {
+            margin: 20px;
+            text-align: center;
+            padding-bottom: 60px; /* Space for the navbar */
+        }
+
+        .stories-section h2 {
+            color: aqua;
+            margin-bottom: 20px;
+        }
+
+        /* stories container: 4 categories per row */
+        .stories-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 40px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .stories-item {
+            background-color: rgba(34, 34, 34, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            position: relative; /* Allow absolute positioning for title */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            margin-top: 20px;
+        }
+
+        .stories-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .stories-title {
+            position: absolute;
+            bottom: 0px; /* Position at the bottom */
+            left: 0px; /* Position from left */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white; /* Text color *//* Padding around the text */
+            width: 100%;
+            border-radius: 5px; /* Rounded corners */
+            font-size: 25px; /* Font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        /* Responsive: for mobile devices, show 1 stories per row */
+        @media (max-width: 768px) {
+            .stories-container {
+                grid-template-columns: 1fr; /* 1 category per row */
+                
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Story section -->
+    <div class="stories-section" id="categories">
+        <h2>Eros apartment ki kahaniya</h2>
+        <div class="stories-container"></div>
+
+        <a href="eros1.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/de/1c/6f/de1c6fe84496ebc16bd8182c9a06adbb.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-1 Origin of Salman </div>
+            </div>
+        </a>
+
+        <a href="eros2.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/11/06/ae/1106ae4003ff6b691c47f67a470643d5.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-2</div>
+            </div>
+        </a>
+
+        <a href="eros3.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/6a/28/e0/6a28e0eb0ca76cf9e6805e09314a9282.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-3 Origin of Salman</div>
+            </div>
+        </a>
+
+        <a href="eros4.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/564x/67/f1/37/67f1375a94728d58c3b8106ea896c912.jpg" alt="Adventure Stories">
+                <div class="stories-title">Part-4</div>
+            </div>
+        </a>
+
+        <a href="eros5.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-5</div>
+            </div>
+        </a>
+
+        <a href="eros6.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-6</div>
+            </div>
+        </a>
+
+        <a href="eros7.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-7</div>
+            </div>
+        </a>
+
+        <a href="eros8.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-8</div>
+            </div>
+        </a>
+
+        <a href="eros9.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-9</div>
+            </div>
+        </a>
+
+        <a href="eros10.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-10</div>
+            </div>
+        </a>
+
+        <a href="eros11.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-11</div>
+            </div>
+        </a>
+
+
+        <a href="eros12.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-12</div>
+            </div>
+        </a>
+
+
+        <a href="eros13.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-13</div>
+            </div>
+        </a>
+
+
+        <a href="eros.html">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title">Part-</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> </a>
+        <a href="story/catagories.html"><i class="fas fa-th-list"></i></a>
+        <a href="story/Language.html"><i class="fas fa-language"></i></a>
+        <a href="story/genre.html"><i class="fas fa-book"></i></a>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
