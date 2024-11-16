@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+    <title>Stories</title>
+    <style>
+        body {
+            background-color: black;
+            color: aqua;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #111;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: aqua;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            background-color: aqua;
+            color: black;
+        }
+
+        /* Category section styles */
+        .stories-section {
+            margin: 20px;
+            text-align: center;
+            padding-bottom: 60px; /* Space for the navbar */
+        }
+
+        .stories-section h2 {
+            color: aqua;
+            margin-bottom: 20px;
+        }
+
+        /* stories container: 4 categories per row */
+        .stories-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 40px;
+            margin-top: 10px;
+        }
+
+        .stories-item {
+            background-color: rgba(34, 34, 34, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            position: relative; /* Allow absolute positioning for title */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            margin-top: 20px;
+        }
+
+        .stories-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .stories-title {
+            position: absolute;
+            bottom: 0px; /* Position at the bottom */
+            left: 0px; /* Position from left */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white; /* Text color *//* Padding around the text */
+            width: 100%;
+            border-radius: 5px; /* Rounded corners */
+            font-size: 25px; /* Font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        /* Responsive: for mobile devices, show 1 stories per row */
+        @media (max-width: 768px) {
+            .stories-container {
+                grid-template-columns: 1fr; /* 1 category per row */
+                
+            }
+        }
+        .page{
+            text-align: center;
+            color: green;
+            
+        }
+
+        .page a{
+            position: fixed;
+            bottom: 43px;
+            right: 0;
+            width: 30px;
+            text-align: center;
+            color: aqua;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: black;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Story section -->
+    <div class="stories-section" id="categories">
+        <h2>comics</h2>
+        <div class="stories-container"></div>
+        
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="https://ctvgkrh.mxodeprmrzoc.hath.network:7878/h/d5f0022009538ba2b73709c3232a527b7d4c3a45-141709-573-697-jpg/keystamp=1731657000-957a6b3f57;fileindex=127528768;xres=org/CONQUERED_part_1_THE_QUEEN_1.jpg" alt="Adventure Stories">
+                <div class="stories-title">Conquered-1</div>
+            </div>
+        </a>
+
+        <a href="comic/collection/padosi.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/564x/e4/9c/85/e49c8596bf9d1cecb9e90d6cecb1e60e.jpg" alt="Adventure Stories">
+                <div class="stories-title">Padosi ne banaya rakhel</div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/8b/37/a6/8b37a6764ba5e3561bdd60285133179e.jpg" alt="Adventure Stories">
+                <div class="stories-title">मेरे हवसी बॉस ने माँ को रखैल बना लिया</div>
+            </div>
+        </a>
+
+        <a href="comic/collection/kasai.html">
+            <div class="stories-item">
+                <img src="https://i.pinimg.com/736x/66/c8/99/66c899988c3b0a5f94dc56d9b01a1227.jpg" alt="Adventure Stories">
+                <div class="stories-title">kasai ki rakhail</div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        <a href="comic/collection/">
+            <div class="stories-item">
+                <img src="" alt="Adventure Stories">
+                <div class="stories-title"></div>
+            </div>
+        </a>
+
+        
+    </div>
+    <div class="page">
+        <a href="stories2.html"><span class="material-symbols-outlined">
+            arrow_forward
+            </span></a>
+    </div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> </a>
+        <a href="story/catagories.html"><i class="fas fa-th-list"></i></a>
+        <a href="story/Language.html"><i class="fas fa-language"></i></a>
+        <a href="story/genre.html"><i class="fas fa-book"></i></a>
+        <a href="https://3sex.com/?ref=MF-DK&utm_medium=top_menu&utm_source=MF-DK"><i class="fa-regular fa-circle-play"></i></a>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
